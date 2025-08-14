@@ -1,0 +1,56 @@
+header {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  @extend .flexBox;
+  padding: 27px 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  //Logo
+  .logo {
+    font-size: 33px;
+    font-weight: 700;
+    white-space: nowrap;
+    //Span
+    span {
+      color: $main-color;
+    }
+  }
+  //nav
+  .navbar {
+    @extend .flexBox;
+    a {
+      font-size: $p-font;
+      font-weight: 500;
+      margin: 15px 22px;
+      text-transform: uppercase;
+      display: block;
+      @extend .transition;
+      &:hover {
+        color: $main-color;
+        scale: 1.2;
+      }
+    }
+  }
+  //Right Area
+  .header-right {
+    @extend .flexBox;
+    a {
+      font-size: 20px;
+      margin: 0 18px 0 5px;
+      @extend .transition;
+      &:hover {
+        color: $main-color;
+        scale: 1.2;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
