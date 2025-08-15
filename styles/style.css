@@ -28,10 +28,20 @@ header .logo {
   font-weight: 700;
   white-space: nowrap;
 }
+@media (max-width: 800px) {
+  header .logo {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  header .logo {
+    font-size: 25px;
+  }
+}
 header .logo span {
   color: #ffa343;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   header .navbar {
     display: none;
   }
@@ -43,13 +53,40 @@ header .navbar a {
   text-transform: uppercase;
   display: block;
 }
+@media (max-width: 1000px) {
+  header .navbar a {
+    font-size: 13px;
+    margin: 10px 15px;
+  }
+}
 header .navbar a:hover {
   color: #ffa343;
   scale: 1.2;
 }
+header .navbar.open {
+  position: fixed;
+  right: 10px;
+  top: 120%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 20px 0;
+  border-radius: 16px;
+}
 header .header-right a {
   font-size: 20px;
   margin: 0 18px 0 5px;
+}
+@media (max-width: 800px) {
+  header .header-right a {
+    display: none;
+  }
 }
 header .header-right a:hover {
   color: #ffa343;
@@ -60,11 +97,11 @@ header .header-right a a:first-child {
   font-size: 1rem;
   margin-right: 20px;
 }
-header .header-right a #menu-btn {
+header #menu-btn {
   display: none;
 }
-@media (max-width: 1300px) {
-  header .header-right a #menu-btn {
+@media (max-width: 800px) {
+  header #menu-btn {
     display: block;
   }
 }

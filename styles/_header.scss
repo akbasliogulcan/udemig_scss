@@ -18,6 +18,12 @@ header {
     font-size: 33px;
     font-weight: 700;
     white-space: nowrap;
+    @include tablet {
+      font-size: 20px;
+    }
+    @include laptop {
+      font-size: 25px;
+    }
     //Span
     span {
       color: $main-color;
@@ -36,16 +42,40 @@ header {
       text-transform: uppercase;
       display: block;
       @extend .transition;
+      @include laptop {
+        font-size: 13px;
+        margin: 10px 15px;
+      }
       &:hover {
         color: $main-color;
         scale: 1.2;
       }
     }
   }
+  .navbar.open {
+    position: fixed;
+    right: 10px;
+    top: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 20px 0;
+    border-radius: 16px;
+  }
   //Right Area
   .header-right {
     @extend .flexBox;
+
     a {
+      @include tablet {
+        display: none;
+      }
       font-size: 20px;
       margin: 0 18px 0 5px;
       @extend .transition;
@@ -58,13 +88,13 @@ header {
         font-size: $p-font;
         margin-right: 20px;
       }
-      #menu-btn {
-        display: none;
-        //*menü butonunun ekran küçüldüğünde belirmesini sağlıyoruz.
-        @include laptop {
-          display: block;
-        }
-      }
+    }
+  }
+  #menu-btn {
+    display: none;
+    //*menü butonunun ekran küçüldüğünde belirmesini sağlıyoruz.
+    @include tablet {
+      display: block;
     }
   }
 }
