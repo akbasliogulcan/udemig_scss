@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Cairo:wght@200..1000&family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CO+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tsukimi+Rounded&family=Young+Serif&display=swap");
+.flexBox, header .header-right, header .navbar, header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transition, header .header-right a, header .navbar a {
+  transition: all 0.5s ease-in-out;
+}
+
 header {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.24);
@@ -21,6 +31,11 @@ header .logo {
 header .logo span {
   color: #ffa343;
 }
+@media (max-width: 1300px) {
+  header .navbar {
+    display: none;
+  }
+}
 header .navbar a {
   font-size: 1rem;
   font-weight: 500;
@@ -41,15 +56,17 @@ header .header-right a:hover {
   scale: 1.2;
   transform: translateY(-3px);
 }
-
-.flexBox, header, header .navbar, header .header-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header .header-right a a:first-child {
+  font-size: 1rem;
+  margin-right: 20px;
 }
-
-.transition, header .navbar a, header .header-right a {
-  transition: all 0.5s ease-in-out;
+header .header-right a #menu-btn {
+  display: none;
+}
+@media (max-width: 1300px) {
+  header .header-right a #menu-btn {
+    display: block;
+  }
 }
 
 * {

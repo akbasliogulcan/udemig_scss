@@ -26,6 +26,9 @@ header {
   //nav
   .navbar {
     @extend .flexBox;
+    @include laptop {
+      display: none;
+    }
     a {
       font-size: $p-font;
       font-weight: 500;
@@ -50,6 +53,17 @@ header {
         color: $main-color;
         scale: 1.2;
         transform: translateY(-3px);
+      }
+      a:first-child {
+        font-size: $p-font;
+        margin-right: 20px;
+      }
+      #menu-btn {
+        display: none;
+        //*menü butonunun ekran küçüldüğünde belirmesini sağlıyoruz.
+        @include laptop {
+          display: block;
+        }
       }
     }
   }
