@@ -42,10 +42,7 @@ header {
       text-transform: uppercase;
       display: block;
       @extend .transition;
-      @include laptop {
-        font-size: 13px;
-        margin: 10px 15px;
-      }
+
       &:hover {
         color: $main-color;
         scale: 1.2;
@@ -76,9 +73,10 @@ header {
       @include tablet {
         display: none;
       }
+      @extend .transition;
       font-size: 20px;
       margin: 0 18px 0 5px;
-      @extend .transition;
+
       &:hover {
         color: $main-color;
         scale: 1.2;

@@ -12,6 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
+
     h5 {
       font-size: 18px;
       font-weight: 600;
@@ -25,6 +26,9 @@
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 20px;
+      @include tablet {
+        font-size: 28px;
+      }
     }
     p {
       font-size: $p-font;

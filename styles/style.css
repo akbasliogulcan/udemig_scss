@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Cairo:wght@200..1000&family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CO+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tsukimi+Rounded&family=Young+Serif&display=swap");
-.flexBox, header .header-right, header .navbar, header {
+.flexBox,
+header .header-right,
+header .navbar,
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.transition, header .header-right a, header .navbar a {
+.transition,
+header .header-right a,
+header .navbar a {
   transition: all 0.5s ease-in-out;
 }
 
@@ -107,7 +112,8 @@ header #menu-btn {
 }
 
 #home {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/group.jpeg");
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/group.jpeg");
   height: 100vh;
   background-size: cover;
   background-position: bottom-center;
@@ -136,6 +142,54 @@ header #menu-btn {
 #home .home-text p {
   font-size: 1rem;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.6705882353);
+  margin-bottom: 35px;
+}
+#educations .educations-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  gap: 3rem;
+  text-align: center;
+  align-items: center;
+}
+#educations .educations-content .education-card {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#educations .educations-content .education-card .education-card-image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#educations .educations-content .education-card .education-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+#educations
+  .educations-content
+  .education-card
+  .education-card-image
+  img:hover {
+  scale: 1.2;
+}
+#educations .educations-content .education-card h4 {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#educations .educations-content .education-card h4:hover {
+  color: #ffa343;
 }
 
 * {
@@ -156,4 +210,24 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: #000000;
   color: #ffffff;
+}
+
+.btn {
+  padding: 13px 40px;
+  display: inline-block;
+  background-color: #ffa343;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.btn:hover {
+  border: 2px solid white;
+  background-color: transparent;
+  color: #ffffff;
+  transform: translateX(10px);
+}
+
+section {
+  padding: 70px 17% 60px;
 }
